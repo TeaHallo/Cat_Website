@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="keywords" content="cat, cute, interactive"/>
+    <meta name="description" content="Cat fun"/>
+    <meta name="author" content="Captain Boots"/>
+    <!--<meta http-equiv="refresh" content="60"/>-->
+    <base target="_blank"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.png"/>
+    <script type="text/javascript" src="scripts.js"></script>
+    <title class="text">Cat Page</title>
+  </head>
+  <header>
+    <h1 class="text" ><img src="Images/favicon.png" alt="Cat icon" id="cicon"
+     style="width:15px; height:15px;"/>Cat Page<img src="Images/favicon.png" style="width:15px; height:15px;"/></h1>
+    <p>Where cats are loved</p>  
+  </header>
+  <body> 
+    
+   <div id="result"></div>
+
+    <script>
+    // Check browser support
+    if (typeof(Storage) !== "undefined") {
+      // Store
+      localStorage.setItem("catname", "Leaf");
+      // Retrieve
+      document.getElementById("result").innerHTML = localStorage.getItem("catname");
+    } else {
+      document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+    </script>
+    
+    <ul class="menu">
+      <li class="item"><a href="Images/eyes.png">Eyes</a></li>
+      <li class="item"><a href="Images/ears.png">Ears</a></li>
+      <li class="item"><a href="Images/muzzle.png">Muzzle</a></li>
+      <li class="item"><a href="Images/paws.png">Paws</a></li>
+    </ul> 
+    <hr>
+    
+   
+   <canvas id="catcanvas" width="300" height="200" style="border:2px solid purple; background-color:antiquewhite;"></canvas>
+    <svg width="300" height="200">
+      <circle cx="150" cy="150" r="40" stroke="antiquewhite" stroke-width="5" fill="purple"/>
+    </svg>
+   
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dEFGfu_tHsA?autoplay=1&mute=1&controls=0" frameborder="10"></iframe>
+    <hr/>
+    
+    <br/>
+    <p>Click and drag the Halloween to the next box!</p>
+    <div id="weenspot" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="Images/girl.gif" alt="A sitting cat" height="200px" width="300px" style="margin:none;" draggable="true" ondragstart="drag(event)" id="dween" ></div> 
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>  
+    
+    <br/>
+    
+    <div>
+      <table>
+        <caption style="background-color:#312546; color:antiquewhite; font-size:20px;">Table of Cats</caption>
+        <tr>
+          <th>Cats</th>
+          <th>Position on Page</th>
+        </tr>
+        <tr>
+          <td>Tea Leaf</td>
+          <td>First Cat</td>
+        </tr>
+        <tr>
+          <td>Halloween</td>
+          <td>Second Cat</td>
+        </tr>
+        <tr>
+          <td>Grey</td>
+          <td>Third Cat</td>
+        </tr>
+        <tr>
+          <td>Cat Map</td>
+          <td>Fourth Cat</td>
+        </tr>
+        <tr>
+          <td>Cat Lamp</td>
+          <td>Fifth Cat</td>
+        </tr>
+      </table>
+      <br>
+      <a href="#secondcat" target="_self">Jump to second cat</a><br>
+      <a href="#thirdcat" target="_self">Jump to third cat</a><br>
+      <a href="#catmap" target="_self">Jump to fourth cat</a><br>
+      <a href="#halloweenlamp" target="_self">Jump to fifth cat</a>
+    </div>
+
+    <hr>
+    <figure>
+      <a href=
+       "https://www.yandex.ru/images/search?text=%D0%BB%D0%B5%D1%81%D0%BD%D0%BE%D0%B9%20%D0%BA%D0%BE%D1%82">
+      <img title="Click me!" id="firstcat" src="Images/tea.jpg" alt="A siamese cat" width="30%" height="20%"></a>
+      <figcaption style="background-color:black; color:white">Captain Boots</figcaption>
+    </figure>
+    <hr>
+    <img style="width:30%;height:20%;" src="Images/ween.gif" id="secondcat" alt="A striped cat" title="A cat taking a bath!"/>
+    <aside>
+      <q class="text">Currently, there are about 600 million domestic cats in the world</q><br>
+      <img src="Images/kiticon.jpg" id="icon" alt="Cat icon" style="width:50px; height:50px"/>
+    </aside>
+
+    <aside>
+      <blockquote class="text" cite="https://ru.wikipedia.org/wiki/?????">
+      Often, the domestic <abbr title="Felis Catus">cat</abbr> is considered as a subspecies of the forest cat 
+      </blockquote>
+    </aside>
+
+    <picture>
+      <source srcset="Images/grey2.png" media="(max-width:600px)">
+      <source srcset="Images/grey3.png" media="(max-width:1000px)">
+      <img style="width:30%; height:20%;" src="Images/grey3.png" id="thirdcat" alt="A spotted cat" title="A spotted Russian cat!">
+    </picture>
+    <hr>
+
+    <div>
+      <section>
+        <ul style="list-style-type:square;">
+          <li>Cats have <span class="fspan">whiskers</span></li>
+          <li>Cats have <span class="fspan">tails</span></li>
+          <li>Cats have <span class="fspan">paws</span></li>
+        </ul>
+      </section>
+      <section>
+        <ol type="I">
+          <li>Cats are <span class="sspan">good jumpers</span></li>
+          <li>Cats are <span class="sspan">carnivorous</span></li>
+          <li>Cats can <span class="sspan">see in the dark</span></li>
+        </ol>
+      </section>
+      <section>
+        <dl>
+          <dt><span class="fspan">Cats</span></dt>
+          <dd><span class="sspan uspan">-Wonderful creatures</span></dd>
+          <dt>Humans</dt>
+          <dd>-Not so great</dd>
+        </dl>
+      </section>
+      <section>
+        <ul>
+          <li>Fur types
+            <ol start="10">
+              <li><span class="sspan">Fluffy</span></li>
+              <li><span class="fspan">Silky</span></li>
+              <li><span class="sspan">Coarse</span></li>
+              <li><span class="fspan">Bald</span></li>
+            </ol>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <article>
+      <p>From where and when are you looking at these lovely cats?</p>
+      <button type="button" onclick="dateFunction()">Tell Captain Boots</button>
+      <p id="showdate"></p>
+      <button onclick="getLocation()">Your position</button>
+      <p id="demo"></p> 
+      <script type="text/javascript" language="javascript">x = document.getElementById("demo");</script>
+    </article>
+    <hr>
+
+    <p style="font-size:20px;">A cat map with some interesting facts!<img id="catmap" 
+    src="Images/cat_map.png" style="width:215px; height:200px; display:block; margin-left:auto;
+    margin-right:auto;" usemap="#partsmap" alt="A cartoon cat with a mapped body"/>
+    </p>
+
+    <map name="partsmap">
+    <area shape="poly" coords="160, 30, 160, 40, 160, 50, 160, 70, 160, 100, 170, 100, 175, 100, 200, 100,
+     200, 70, 200, 50, 200, 30, 175, 10" alt="Cat tail" title="Cat tail"
+     href="https://www.petmd.com/cat/behavior/evr_ct_what-does-it-mean-when-a-cat-wags-tail"
+     onclick="tailFunction()">
+    <area coords="175, 110, 180, 115, 185, 120, 190, 125, 180, 130, 175, 135, 165, 140, 160, 150, 150, 160,
+     140, 170, 130, 170, 125, 170, 120, 170, 115, 170, 110, 170, 100, 170, 90, 170, 85, 165, 85, 160, 85,
+     155, 80, 155, 75, 155, 70, 155, 65, 155, 60, 155, 55, 155, 50, 155, 45,
+     155, 40, 155, 40, 150, 40, 145, 40, 140, 40, 135, 40, 130, 40, 125, 40, 120, 40, 115, 50, 110, 55,
+     105, 60, 90, 65, 85, 70, 90, 75, 90, 80, 90, 90, 90, 95, 90, 100, 90, 105, 90, 110, 90, 115, 90, 120,
+     90, 130, 90, 140, 90, 150, 90, 160, 100" shape="poly"
+     alt="Cat body" title="Cat body"
+     href="https://www.tuftandpaw.com/blogs/cat-guides/the-definitive-guide-to-cat-behavior-and-body-language">
+    <area coords="35, 25, 45, 50, 40, 50, 25, 50, 30, 30" shape="poly" alt="Cat ear" title="Cat ear"
+     href="https://www.hillspet.com/cat-care/behavior-appearance/cat-ear-language#:~:text=%22Like%20a%20sophisticated%20satellite%20dish,noises%2C%22%20said%20Animal%20Planet.">
+    <area coords="65, 25, 75, 50, 70, 50, 55, 50, 60, 30" shape="poly" alt="Cat ear" title="Cat ear"
+     href="https://www.hillspet.com/cat-care/behavior-appearance/cat-ear-language#:~:text=%22Like%20a%20sophisticated%20satellite%20dish,noises%2C%22%20said%20Animal%20Planet.">
+    <area coords="60, 160, 65, 160, 70, 160, 75, 160, 80, 160, 85, 170, 80, 178, 75, 178, 70, 178, 65, 178,
+     60, 178, 55, 178, 45, 170" shape="poly" alt="Cat paw" title="Cat paw"
+     href="https://www.lifewithcats.tv/paw-prints-through-the-ages-cats-still-walk-wherever-and-whenever-they-want/">
+    <area coords="140, 170, 145, 170, 150, 170, 155, 170, 160, 170, 165, 180, 160, 188, 165, 188, 150, 188,
+     145, 188, 140, 188, 135, 188, 125, 180" shape="poly" alt="Cat paw" title="Cat paw"
+     href="https://www.lifewithcats.tv/paw-prints-through-the-ages-cats-still-walk-wherever-and-whenever-they-want/">
+    </map>
+
+    <div>
+      <ul class="food">
+        <li class="food">Chicken</li>
+        <li class="food">Fish</li>
+        <li class="food">Rabbit</li>                        
+      </ul>
+      <button type="button" style="float:left" onClick="delFunction()">Hide cat food options</button><br>
+    </div>
+
+    <div>
+      <p id="changer" style="display:inline">Cats are okay</p>
+      <button type="button" onclick="changeWords()">Click for the truth</button>
+    </div>
+
+    <div>
+     <br><p><a href="https://lithub.com/15-great-cat-poems-not-written-by-cats/" 
+     target="catframe">Click for some Cat Poetry</a></p>
+     <iframe scrolling="yes" src="holder.html" name="catframe" title="Cat Poetry Window" style="border:none;
+      height:300px; width:100%">
+     </iframe>
+    </div>
+    <hr>
+
+    <p>Make the cat halloween lamp glow!</p>
+    <img id="halloweenlamp" src="Images/halloweencatoff.png" width="200px" height="200px"
+     alt="A halloween cat head"/>
+    <p><button type="button" onclick="lamp(1)">Turn on</button>
+    <button type="button" onclick="lamp(0)">Turn off</button></p>
+    <hr>
+
+    <code>1 <var>cat</var> + 1 <var>cat</var> = </code>
+    <button type="button" onclick="showCode()">?</button><br>
+    <samp id="catcode"></samp>
+
+    <form action="submit-form.html" method="get" autocomplete="off">
+      <h2>Create your own cat!</h2>
+      <fieldset>
+        <legend>Fur</legend>
+        <label for="fcolors">Color: </label>
+        <input type="color" id="fcolors" name="fcolors" required/>
+        <br/>
+        <br/>
+        <label for="cfur">Type: </label>
+        <input list="cfur" required/>
+        <datalist id="cfur" name="cfur">
+          <option>Curly</option>
+          <option>Straight</option>
+          <option>Bald</option>
+        </datalist>
+      </fieldset>
+      
+      <fieldset>
+        <legend>Features</legend>
+        <label for="eyecolor">Eye Color:</label>
+        <input type="radio" id="blue" name="eyecolor" value="blue"/>
+        <label for="blue">Blue</label>
+        <input type="radio" id="green" name="eyecolor" value="green" checked/>
+        <label for="green">Green</label>
+        <input type="radio" id="yellow" name="eyecolor" value="yellow"/>
+        <label for="yellow">Yellow</label>
+        <input type="radio" id="orange" name="eyecolor" value="orange"/>
+        <label for="orange">Orange</label>
+        <br/>
+        <br/>
+        <label for="short medium long">Tail Length:</label>
+        <input type="checkbox" name="short" id="short" value="short"/>
+        <label for="short">Short</label>
+        <input type="checkbox" name="medium" id="medium" value="medium"/>
+        <label for="medium">Medium</label>
+        <input type="checkbox" name="long" id="long" value="long"/>
+        <label for="long">Long</label>
+        <br/>
+        <br/>
+        <label for="meow">Meow Type:</label>
+        <input type="text" id="meow" name="meow" value="Cute" size="4" readonly/>
+      </fieldset>
+      <br/>
+      <br/>
+      <fieldset>
+        <legend>Personal Info</legend>
+        <label for="cname">Name:</label>
+        <select size="4" name="cname" id="cname"><!--if using keyword "multiple" users can select more than one by pressing ctrl-->
+          <option value="mitzy">Mitzy</option>
+          <option selected value="captainboots">Captain Boots</option>
+          <option value="fluffymcflufferson">Fluffy McFlufferson</option>
+          <option value="whiskers">Whiskers</option>
+        </select>
+        <br/>
+        <br/>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" min="1990-01-01" max="2022-07-18"/>
+
+        <input type="hidden" id="server" name="server" value="catserver"/>
+        <br/>
+        <br/>
+        <label for="catlives">Number of cat lives:</label>
+        <input type="number" id="catlives" name="catlives" min="1" value="9"/>
+        <br/>
+        <br/>
+        <textarea  cols="35" rows="10" name="cdetails" maxlength="350">Enter more details about your cat &#128008</textarea>
+      </fieldset>
+      <br/>
+      <br/>
+      <button type="submit" formnovalidate="formnovalidate">Create!</button>
+      <br/>
+      <br/>
+      <input type="submit" value="Submit encoded" formtarget="_self" formmethod="post" formenctype="multipart/form-data" formaction="Images/kiticon.jpg"/>
+      <br/>
+      <br/>
+      <input type="reset" value="Clear Form"/>
+ 
+    </form>    
+  </body>
+  <footer>
+    <address class="text">Written by Captain Boots<br><a href="mailto:chingus@yahoo.com">Contact Boots</a><br>
+      Visit <a href="https://www.nationalgeographic.com/animals/mammals/facts/domestic-cat"
+      title="Some cat facts!">here</a> for more info <br>
+    </address>
+    <br>
+  </footer>
+
+  <nav style="background-color:black; color:white">
+    Search for cats: <br>
+    <a href="https://swisscows.com/image?query=cats">SwissCows</a> |
+    <a href="https://duckduckgo.com/?q=cats&iax=images&ia=images">DuckDuckGo</a> |
+    <a href="https://wordpress.org/openverse/search/image?q=cats">Wordpress</a>
+  </nav> 
+</html>
